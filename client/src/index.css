@@ -1620,3 +1620,22 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
 .today-feature .btn { color: #10150d; background: var(--rose); }
 .today-feature .btn:hover { background: #c8ff48; }
 .page-heading h1, .section-heading h2, .recent-card h3, .progress-card h3, .weekly-insight h3, .week-card-header h3, .empty-state h3 { font-family: "Barlow Condensed",Impact,sans-serif; font-weight: 700; letter-spacing: .015em; text-transform: uppercase; }
+
+
+/* Owner authenticity signature; retain the Monster Fit graphite/lime identity. */
+.owner-authenticity-footer {
+  display: grid;
+  place-items: center;
+  padding: 28px 18px calc(28px + env(safe-area-inset-bottom));
+  border-top: 1px solid #293329;
+  background: #121713;
+  color: #b2bcae;
+  text-align: center;
+}
+.owner-authenticity-footer p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(14px, 2.5vw, 19px);
+  font-weight: 400;
+  line-height: 1.4;
+}

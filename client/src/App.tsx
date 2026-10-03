@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { AlertTriangle, Search } from "lucide-react";
 import AuthScreen from "./components/AuthScreen";
+import OwnerFooter from "./components/OwnerFooter";
 import AppShell from "./components/AppShell";
 import { Button, Modal } from "./components/common";
 import Dashboard from "./pages/Dashboard";
@@ -195,7 +196,7 @@ export default function App() {
     window.setTimeout(() => window.dispatchEvent(new CustomEvent("monster-fit:select-exercise", { detail: exercise.id })), 80);
   }
 
-  if (!account || !data) return <><AuthScreen auth={auth} /><div id="pwa-auth-install-anchor"/></>;
+  if (!account || !data) return <><AuthScreen auth={auth} /><div id="pwa-auth-install-anchor"/><OwnerFooter /></>;
   const searchIsOpen = searchValue.trim().length > 0;
   const activeWorkout = data.workouts.find((workout) => workout.id === data.activeWorkout?.workoutId) ?? null;
   let pageContent;
@@ -219,6 +220,7 @@ export default function App() {
       {storageError && <div className="storage-warning" role="alert"><AlertTriangle size={17}/>{storageError}</div>}
       {pageContent}
     </AppShell>
+    <OwnerFooter />
     <Modal open={!!deleteTarget} title={`Excluir ${deleteTarget?.title || "este treino"}?`} eyebrow="ESSA AÇÃO NÃO PODE SER DESFEITA" onClose={() => setDeleteTarget(null)}><p className="confirm-copy">O treino será removido e qualquer dia da agenda associado a ele ficará livre. O histórico de sessões já concluídas será mantido.</p><div className="modal-actions"><Button variant="outline" onClick={() => setDeleteTarget(null)}>CANCELAR</Button><Button variant="danger" onClick={confirmDeleteWorkout}>SIM, EXCLUIR</Button></div></Modal>
     <Modal open={!!abandonPrompt} title="Trocar de treino?" eyebrow="TREINO EM ANDAMENTO" onClose={() => setAbandonPrompt(null)}><p className="confirm-copy">Há uma sessão ainda não concluída. Iniciar <strong>{abandonPrompt?.title}</strong> descartará as séries concluídas na sessão atual.</p><div className="modal-actions"><Button variant="outline" onClick={() => setAbandonPrompt(null)}>CONTINUAR ATUAL</Button><Button variant="danger" onClick={() => abandonPrompt && forceStartWorkout(abandonPrompt)}>DESCARTAR E INICIAR</Button></div></Modal>
     {!isInstalled && <InstallHint />}
