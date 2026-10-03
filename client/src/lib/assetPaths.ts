@@ -9,6 +9,9 @@ export const HERO_IMAGE_URL = isGitHubPagesBuild
   ? appAssetUrl("media/monster-fit-training-hero.webp")
   : "/media/monster-fit-training-hero.webp";
 
-export function exerciseImageUrl(key: string, manuscriptUrl: string): string {
-  return isGitHubPagesBuild ? appAssetUrl(`media/exercises/${key}.gif`) : manuscriptUrl;
+export function exerciseImageUrl(_key: string, manuscriptUrl: string): string {
+  // Exercise GIFs are hosted by their configured source URL.
+  // GitHub Pages must not rewrite them to /media/exercises unless the binary
+  // file actually exists in the repository.
+  return manuscriptUrl;
 }
