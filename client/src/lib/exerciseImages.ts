@@ -1,13 +1,13 @@
 import { exerciseImageUrl } from "./assetPaths";
 
 const manuscriptImages: Record<string, string> = {
-  "barra-fixa-neutra": "/manus-storage/pull-up-human_ec27400a.gif",
+  "barra-fixa-neutra": "https://static.exercisedb.dev/media/pP8wP2P.gif",
   "desenvolvimento-barra": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/barbell-seated-overhead-press.gif",
   "rosca-alternada-em-pe": "/manus-storage/rosca-alternada_99315757.gif",
   "rosca-inversa": "https://media.giphy.com/media/19sC5eqKESXu3Adk6l/giphy.gif",
-  "crucifixo-inverso": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/lever-seated-reverse-fly.gif",
+  "crucifixo-inverso": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/dumbbell-reverse-fly.gif",
   "remada-curvada-supinada": "https://media.giphy.com/media/UrWHv8duIA6ztuR6ks/giphy.gif",
-  "remada-cavalinho": "https://media.giphy.com/media/Ue8WnVPRAAj2i75SOj/giphy.gif",
+  "remada-cavalinho": "https://gifdb.com/gif/animated-man-lifting-t-bar-row-qdh2r51vmoocr8u7.html",
   "hip-thrust": "/manus-storage/hip-thrust_80b089d1.gif",
   "elevacao-pelvica": "/manus-storage/elevacao-pelvica_ac7b41a5.gif",
   "glute-bridge": "/manus-storage/glute-bridge_d7364c5f.gif",
