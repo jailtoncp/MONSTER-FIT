@@ -1639,3 +1639,20 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
   font-weight: 400;
   line-height: 1.4;
 }
+
+/* Crédito obrigatório das demonstrações licenciadas; permanece legível sobre o GIF. */
+.exercise-media-credit {
+  position: absolute;
+  right: 7px;
+  bottom: 6px;
+  z-index: 5;
+  max-width: calc(100% - 14px);
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #fff;
+  background: rgba(0, 0, 0, .68);
+  font-size: 8px;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  pointer-events: none;
+}
