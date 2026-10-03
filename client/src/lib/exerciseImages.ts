@@ -7,7 +7,7 @@ const manuscriptImages: Record<string, string> = {
   "rosca-inversa": "https://media.giphy.com/media/19sC5eqKESXu3Adk6l/giphy.gif",
   "crucifixo-inverso": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/dumbbell-reverse-fly.gif",
   "remada-curvada-supinada": "https://media.giphy.com/media/Ue8WnVPRAAj2i75SOj/giphy.gif",
-  "remada-cavalinho": "https://media.giphy.com/media/UrWHv8duIA6ztuR6ks/giphy.gif",
+  "remada-cavalinho": "https://media1.tenor.com/m/DPfMJrsdpTAAAAAd/t-bar-row.gif",
   "hip-thrust": "/manus-storage/hip-thrust_80b089d1.gif",
   "elevacao-pelvica": "/manus-storage/elevacao-pelvica_ac7b41a5.gif",
   "glute-bridge": "/manus-storage/glute-bridge_d7364c5f.gif",
