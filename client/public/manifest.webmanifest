@@ -1,0 +1,18 @@
+{
+  "name": "MONSTER FIT — Treino e evolução",
+  "short_name": "MONSTER FIT",
+  "description": "Treino, força e evolução no seu ritmo.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0c100d",
+  "theme_color": "#0c100d",
+  "icons": [
+    { "src": "icons/monster-fit-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/monster-fit-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/monster-fit.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "categories": ["health", "fitness", "lifestyle"]
+}
