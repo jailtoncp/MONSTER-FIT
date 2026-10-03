@@ -148,6 +148,27 @@ const manuscriptImages: Record<string, string> = {
   "fundos-escapulares": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/scapula-dips.gif",
   "caminhada-inclinada-esteira": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walking-on-incline-treadmill.gif",
   "joelho-alto-parede": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/high-knee-against-wall.gif",
+  // Novas variações de abdômen e cardio, todas com demonstração animada.
+  "3-4-sit-up": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/3-4-sit-up.gif",
+  "alternate-heel-touchers": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/alternate-heel-touchers.gif",
+  "band-alternating-v-up": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/band-alternating-v-up.gif",
+  "band-jack-knife-sit-up": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/band-jack-knife-sit-up.gif",
+  "barbell-press-sit-up": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/barbell-press-sit-up.gif",
+  "cable-reverse-crunch": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/cable-reverse-crunch.gif",
+  "cable-seated-crunch": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/cable-seated-crunch.gif",
+  "lever-seated-crunch-chest-pad": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/lever-seated-crunch-chest-pad.gif",
+  "lever-seated-crunch-v-2": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/lever-seated-crunch-v-2.gif",
+  "lever-seated-leg-raise-crunch": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/lever-seated-leg-raise-crunch.gif",
+  "lever-kneeling-twist": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/lever-kneeling-twist.gif",
+  "skater-hops": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/skater-hops.gif",
+  "ski-step": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/ski-step.gif",
+  "scissor-jumps-male": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/scissor-jumps-male.gif",
+  "semi-squat-jump-male": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/semi-squat-jump-male.gif",
+  "star-jump-male": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/star-jump-male.gif",
+  "short-stride-run": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/short-stride-run.gif",
+  "walk-elliptical-cross-trainer": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walk-elliptical-cross-trainer.gif",
+  "walking-on-stepmill": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walking-on-stepmill.gif",
+  "run-equipment": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/run-equipment.gif",
 };
 
 export const EXERCISE_IMAGES: Record<string, string> = Object.fromEntries(
