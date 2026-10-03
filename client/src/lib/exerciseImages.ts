@@ -1,7 +1,7 @@
 import { exerciseImageUrl } from "./assetPaths";
 
 const manuscriptImages: Record<string, string> = {
-  "barra-fixa-neutra": "https://static.exercisedb.dev/media/pP8wP2P.gif",
+  "barra-fixa-neutra": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/pull-up-neutral-grip.gif",
   "desenvolvimento-barra": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/barbell-seated-overhead-press.gif",
   "rosca-alternada-em-pe": "https://i.makeagif.com/media/6-22-2014/pLhtJe.gif",
   "rosca-inversa": "https://media.giphy.com/media/19sC5eqKESXu3Adk6l/giphy.gif",
