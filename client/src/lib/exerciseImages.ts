@@ -169,6 +169,7 @@ const manuscriptImages: Record<string, string> = {
   "walk-elliptical-cross-trainer": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walk-elliptical-cross-trainer.gif",
   "walking-on-stepmill": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walking-on-stepmill.gif",
   "run-equipment": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/run-equipment.gif",
+  "supino-landmine-ajoelhado": "/exercises/supino-landmine-ajoelhado.gif",
 };
 
 export const EXERCISE_IMAGES: Record<string, string> = Object.fromEntries(

@@ -165,6 +165,7 @@ const rows: Array<[string, string, string, string, number, string, number, strin
   ["walk-elliptical-cross-trainer","Caminhada no elíptico","Condicionamento","Elíptico",3,"10min",60,"Cardio contínuo em aparelho elíptico, com baixo impacto nas articulações.","Mantenha postura ereta, ritmo constante e aumente a resistência gradualmente."],
   ["walking-on-stepmill","Subida no simulador de escadas","Condicionamento","Simulador de escadas",3,"10min",60,"Cardio contínuo no simulador de escadas para resistência e condicionamento.","Mantenha o peso distribuído nos pés e use as mãos apenas para equilíbrio quando necessário."],
   ["run-equipment","Corrida na esteira","Condicionamento","Esteira",3,"10min",60,"Corrida contínua em esteira para desenvolver resistência cardiorrespiratória.","Comece em velocidade confortável, mantenha postura estável e ajuste a intensidade progressivamente."],
+  ["supino-landmine-ajoelhado", "Supino landmine ajoelhado", "Peito", "Barra / Landmine", 3, "10", 90, "Press de peitoral realizado ajoelhado com a extremidade livre da barra em um sistema landmine, com trajetória diagonal para cima e para frente.", "Ajoelhe-se com o tronco ereto, segure a extremidade da barra junto ao alto do peito e pressione para cima e à frente até quase estender os braços; retorne devagar mantendo o abdômen firme."],
 ];
 
 export const EXERCISE_CATALOG: ExerciseDefinition[] = rows.map(([id, name, muscle, equipment, defaultSets, defaultReps, defaultRestSeconds, description, instructions]) => ({
