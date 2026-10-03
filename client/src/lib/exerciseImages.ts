@@ -173,7 +173,7 @@ const manuscriptImages: Record<string, string> = {
   "rotacao-interna-cabo": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/cable-seated-shoulder-internal-rotation.gif",
   "rotacao-externa-halter-deitado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/dumbbell-lying-external-shoulder-rotation.gif",
   "rotacao-externa-halter-em-pe": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/dumbbell-upright-shoulder-external-rotation.gif",
-  "supino-landmine-ajoelhado": "/exercises/supino-landmine-ajoelhado.gif",
+  "supino-landmine-ajoelhado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/landmine-lateral-raise.gif",
 };
 
 export const EXERCISE_IMAGES: Record<string, string> = Object.fromEntries(
