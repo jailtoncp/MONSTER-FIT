@@ -3,7 +3,7 @@ import { exerciseImageUrl } from "./assetPaths";
 const manuscriptImages: Record<string, string> = {
   "barra-fixa-neutra": "https://static.exercisedb.dev/media/pP8wP2P.gif",
   "desenvolvimento-barra": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/barbell-seated-overhead-press.gif",
-  "rosca-alternada-em-pe": "/manus-storage/rosca-alternada_99315757.gif",
+  "rosca-alternada-em-pe": "https://i.makeagif.com/media/6-22-2014/pLhtJe.gif",
   "rosca-inversa": "https://media.giphy.com/media/19sC5eqKESXu3Adk6l/giphy.gif",
   "crucifixo-inverso": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/dumbbell-reverse-fly.gif",
   "remada-curvada-supinada": "https://media.giphy.com/media/UrWHv8duIA6ztuR6ks/giphy.gif",
