@@ -173,6 +173,11 @@ const manuscriptImages: Record<string, string> = {
   "rotacao-interna-cabo": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/cable-seated-shoulder-internal-rotation.gif",
   "rotacao-externa-halter-deitado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/dumbbell-lying-external-shoulder-rotation.gif",
   "rotacao-externa-halter-em-pe": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/dumbbell-upright-shoulder-external-rotation.gif",
+  "thruster-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/barbell-thruster.gif",
+  "power-clean-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/power-clean.gif",
+  "kettlebell-swing-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/kettlebell-swing.gif",
+  "pull-up-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/pull-up.gif",
+  "push-press-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-push-press.gif",
   "landmine-unilateral-ombro": "/exercises/landmine-unilateral-ombro.gif",
   "supino-landmine-ajoelhado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/landmine-lateral-raise.gif",
 };
