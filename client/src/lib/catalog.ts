@@ -3,6 +3,13 @@ import { EXERCISE_IMAGES } from "./exerciseImages";
 import { EXERCISE_FOCUS } from "./exerciseFocus";
 
 const rows: Array<[string, string, string, string, number, string, number, string, string]> = [
+  ["barra-fixa-neutra","Barra fixa com pegada neutra","Costas","Peso corporal",4,"6",120,"Puxada vertical com o peso do corpo e pegada neutra.","Inicie com as escápulas, mantenha o corpo firme e suba sem impulso, mantendo as mãos em pegada neutra."],
+  ["desenvolvimento-barra","Desenvolvimento com barra","Ombros","Barra",4,"10",90,"Press vertical com barra para os ombros. Pegada frontal ou posterior, em pé ou sentado.","Mantenha o abdômen ativo, estabilize o tronco e empurre a barra com controle."],
+  ["rosca-alternada-em-pe","Rosca alternada em pé","Bíceps","Halteres",3,"10",60,"Rosca unilateral alternada realizada em pé.","Mantenha os cotovelos próximos ao tronco, alterne os braços e controle a descida."],
+  ["rosca-inversa","Rosca inversa","Bíceps","Barra ou polia",3,"12",60,"Flexão de cotovelos com pegada pronada. Pode ser realizada na polia ou com barra.","Mantenha os cotovelos estáveis e os punhos alinhados durante todo o movimento."],
+  ["crucifixo-inverso","Crucifixo inverso","Ombros","Livre ou máquina",3,"12",60,"Abertura posterior para deltoide posterior, livre ou na máquina.","Mantenha os ombros baixos e abra os braços de forma controlada, sem usar impulso."],
+  ["remada-curvada-supinada","Remada curvada supinada","Costas","Barra ou aparelho",4,"10",90,"Remada inclinada com pegada supinada, realizada com barra ou aparelho.","Incline o tronco com coluna neutra e puxe em direção ao abdômen, mantendo o movimento controlado."],
+  ["remada-cavalinho","Remada cavalinho","Costas","Livre ou máquina",4,"10",90,"Remada horizontal no estilo cavalinho, podendo ser realizada livre ou na máquina.","Mantenha o tronco firme e conduza os cotovelos para trás, controlando a volta."],
   ["hip-thrust", "Hip Thrust", "Glúteos", "Barra", 4, "12", 90, "Extensão de quadril com ênfase em glúteos.", "Apoie a parte superior das costas no banco, mantenha o queixo recolhido e suba até alinhar quadril e tronco."],
   ["elevacao-pelvica", "Elevação pélvica", "Glúteos", "Barra", 4, "12", 90, "Movimento de extensão de quadril feito no solo.", "Mantenha os pés firmes, contraia o abdômen e pause no topo sem hiperestender a lombar."],
   ["glute-bridge", "Glute Bridge", "Glúteos", "Peso corporal", 3, "15", 60, "Ponte de glúteos para ativação e controle.", "Deite-se, aproxime os calcanhares do quadril e eleve a pelve com controle."],
