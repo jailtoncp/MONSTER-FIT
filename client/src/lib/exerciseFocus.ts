@@ -10,6 +10,10 @@ export interface ExerciseFocus {
  * trabalhar, mas sua contribuição depende de técnica, amplitude e anatomia.
  */
 export const EXERCISE_FOCUS = {
+  "rotacao-externa-cabo": { purpose: "Rotação externa do ombro com resistência do cabo, enfatizando infraespinal e redondo menor e exigindo estabilização da articulação.", primaryMuscles: ["Infraespinal", "Redondo menor"], secondaryMuscles: ["Deltoide posterior", "Estabilizadores da escápula"] },
+  "rotacao-interna-cabo": { purpose: "Rotação interna do ombro contra resistência, com ênfase no subescapular e na estabilidade glenoumeral.", primaryMuscles: ["Subescapular"], secondaryMuscles: ["Peitoral maior", "Latíssimo do dorso", "Redondo maior"] },
+  "rotacao-externa-halter-deitado": { purpose: "Rotação externa de baixa carga realizada deitado de lado para treinar controle e resistência dos rotadores externos.", primaryMuscles: ["Infraespinal", "Redondo menor"], secondaryMuscles: ["Deltoide posterior"] },
+  "rotacao-externa-halter-em-pe": { purpose: "Rotação externa do ombro com halter e cotovelo estabilizado junto ao tronco.", primaryMuscles: ["Infraespinal", "Redondo menor"], secondaryMuscles: ["Deltoide posterior", "Estabilizadores da escápula"] },
   "hip-thrust": {
     purpose: "Extensão do quadril com o tronco apoiado; favorece a produção de força dos extensores do quadril, com ênfase no glúteo máximo.",
     primaryMuscles: ["Glúteo máximo"],
