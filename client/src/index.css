@@ -1656,3 +1656,9 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
   letter-spacing: .02em;
   pointer-events: none;
 }
+
+
+/* Ação principal do editor: visível antes do toque, inclusive no celular. */
+.add-exercise-button { background: var(--rose) !important; color: #182014 !important; border-color: var(--rose) !important; box-shadow: 0 8px 20px color-mix(in srgb, var(--rose) 28%, transparent); font-weight: 800; }
+.add-exercise-button:hover { background: var(--rose-deep) !important; color: #fff !important; border-color: var(--rose-deep) !important; box-shadow: 0 10px 24px color-mix(in srgb, var(--rose-deep) 30%, transparent); }
+.add-exercise-button:disabled { opacity: .55; filter: saturate(.7); }
