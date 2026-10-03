@@ -204,4 +204,9 @@ export const EXERCISE_FOCUS = {
     primaryMuscles: ["Deltoide anterior", "Deltoide lateral"],
     secondaryMuscles: ["Tríceps braquial", "Peitoral maior (porção clavicular)", "Serrátil anterior", "Core", "Manguito rotador (estabilização)"],
   },
+  "thruster-crossfit": {"purpose":"Movimento composto que combina agachamento frontal e desenvolvimento, elevando a demanda de força e condicionamento.","primaryMuscles":["Quadríceps","Glúteo máximo","Deltoide anterior"],"secondaryMuscles":["Tríceps","Core","Deltoide lateral"]},
+  "power-clean-crossfit": {"purpose":"Levantamento olímpico explosivo que desenvolve potência principalmente pela extensão coordenada de quadril e joelhos.","primaryMuscles":["Glúteo máximo","Isquiotibiais","Quadríceps"],"secondaryMuscles":["Trapézio","Deltoides","Core","Antebraços"]},
+  "kettlebell-swing-crossfit": {"purpose":"Movimento balístico de dobradiça do quadril para potência e condicionamento.","primaryMuscles":["Glúteo máximo","Isquiotibiais"],"secondaryMuscles":["Eretores da coluna","Core","Deltoides","Antebraços"]},
+  "pull-up-crossfit": {"purpose":"Puxada do peso corporal que desenvolve força de dorsais e flexores do cotovelo.","primaryMuscles":["Latíssimo do dorso","Bíceps braquial"],"secondaryMuscles":["Redondo maior","Braquial","Trapézio inferior","Core"]},
+  "push-press-crossfit": {"purpose":"Desenvolvimento acima da cabeça com impulso das pernas para produzir mais força e potência.","primaryMuscles":["Deltoide anterior","Tríceps"],"secondaryMuscles":["Deltoide lateral","Trapézio","Quadríceps","Glúteos","Core"]},
 } satisfies Record<string, ExerciseFocus>;
