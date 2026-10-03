@@ -169,6 +169,10 @@ const manuscriptImages: Record<string, string> = {
   "walk-elliptical-cross-trainer": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walk-elliptical-cross-trainer.gif",
   "walking-on-stepmill": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/walking-on-stepmill.gif",
   "run-equipment": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/run-equipment.gif",
+  "rotacao-externa-cabo": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/cable-standing-shoulder-external-rotation.gif",
+  "rotacao-interna-cabo": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/cable-seated-shoulder-internal-rotation.gif",
+  "rotacao-externa-halter-deitado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/dumbbell-lying-external-shoulder-rotation.gif",
+  "rotacao-externa-halter-em-pe": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/dumbbell-upright-shoulder-external-rotation.gif",
   "supino-landmine-ajoelhado": "/exercises/supino-landmine-ajoelhado.gif",
 };
 
