@@ -1640,6 +1640,13 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
   line-height: 1.4;
 }
 
+@media (max-width: 720px) {
+  /* A navegação inferior é fixa; reserve sua altura para revelar todo o e-mail. */
+  .app-shell ~ .owner-authenticity-footer {
+    margin-bottom: calc(66px + env(safe-area-inset-bottom));
+  }
+}
+
 /* Crédito obrigatório das demonstrações licenciadas; permanece legível sobre o GIF. */
 .exercise-media-credit {
   position: absolute;
