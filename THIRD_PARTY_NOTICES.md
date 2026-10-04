@@ -44,3 +44,7 @@ O GIF `bird-dog.gif` alterna três posições bilaterais fotografadas por PTPion
 ## GIFs anatômicos — costas e ombros
 
 Os GIFs adicionados nesta etapa vêm do dataset [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset), que identifica a mídia como **© Gym visual** e exige manter a atribuição [Gym visual](https://gymvisual.com/). O código e os metadados do dataset são MIT; a mídia segue os termos próprios da Gym visual. Os exercícios que já possuíam GIF local não foram alterados.
+
+## GIFs anatômicos — bíceps e glúteos
+
+Nesta etapa foram adicionados GIFs anatômicos do dataset [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset), com mídia identificada como **© Gym visual**. A atribuição [Gym visual](https://gymvisual.com/) foi mantida no app; a mídia continua sujeita aos termos próprios da fonte. Os GIFs que já existiam não foram alterados.
