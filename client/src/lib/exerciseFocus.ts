@@ -164,6 +164,11 @@ export const EXERCISE_FOCUS = {
     primaryMuscles: ["Tríceps braquial (ênfase funcional na cabeça longa)"],
     secondaryMuscles: ["Demais cabeças do tríceps", "Ancôneo", "Manguito rotador (estabilização do ombro)"],
   },
+  "triceps-testa-halteres-martelo": {
+    purpose: "Extensão dos cotovelos deitado com dois halteres e pegada neutra; trabalha o tríceps com maior liberdade de trajetória para cada braço.",
+    primaryMuscles: ["Tríceps braquial (cabeças longa, lateral e medial)"],
+    secondaryMuscles: ["Ancôneo", "Manguito rotador e musculatura do ombro (estabilização)"],
+  },
   "triceps-testa": {
     purpose: "Extensão dos cotovelos deitado com os braços elevados; fortalece o tríceps enquanto o ombro mantém a posição do úmero.",
     primaryMuscles: ["Tríceps braquial (cabeças longa, lateral e medial)"],
