@@ -158,6 +158,10 @@ export const EXERCISE_FOCUS = {
     purpose: "Extensão do cotovelo contra a polia alta com o braço junto ao tronco; trabalha o tríceps braquial ao estender o antebraço.",
     primaryMuscles: ["Tríceps braquial (cabeças lateral, medial e longa)"],
     secondaryMuscles: ["Ancôneo", "Deltoide e musculatura escapular (estabilização do braço)"],
+  },  "triceps-pulley-invertido": {
+    purpose: "Extensão dos cotovelos na polia alta com pegada supinada; a pegada reversa altera a posição do antebraço e mantém o tríceps como principal motor do movimento.",
+    primaryMuscles: ["Tríceps braquial (cabeças lateral, medial e longa)"],
+    secondaryMuscles: ["Ancôneo", "Flexores e estabilizadores do antebraço"],
   },
   "triceps-frances": {
     purpose: "Extensão do cotovelo acima da cabeça; a posição elevada do braço coloca a cabeça longa do tríceps em maior alongamento.",
