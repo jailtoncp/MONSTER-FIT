@@ -39,6 +39,7 @@ const manuscriptImages: Record<string, string> = {
   "triceps-pulley": "/manus-storage/triceps-pulley_70dedd2a.gif",
   "triceps-frances": "/manus-storage/triceps-frances_2fc9f5f7.gif",
   "triceps-testa": "/manus-storage/triceps-testa_2e3d3ded.gif",
+  "triceps-testa-halteres-martelo": "https://i.makeagif.com/media/12-21-2023/YFEOcH.gif",
   abdominal: "/manus-storage/abdominal_41ec89d4.gif",
   prancha: "/manus-storage/prancha_ab4633a6.gif",
   "elevacao-pernas": "/manus-storage/elevacao-pernas_2059e679.gif",
