@@ -48,3 +48,7 @@ Os GIFs adicionados nesta etapa vêm do dataset [hasaneyldrm/exercises-dataset](
 ## GIFs anatômicos — bíceps e glúteos
 
 Nesta etapa foram adicionados GIFs anatômicos do dataset [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset), com mídia identificada como **© Gym visual**. A atribuição [Gym visual](https://gymvisual.com/) foi mantida no app; a mídia continua sujeita aos termos próprios da fonte. Os GIFs que já existiam não foram alterados.
+
+## GIFs anatômicos — pernas e posteriores
+
+Nesta etapa foram adicionados GIFs anatômicos do dataset [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset), com mídia identificada como **© Gym visual**. A atribuição [Gym visual](https://gymvisual.com/) foi mantida no app; a mídia continua sujeita aos termos próprios da fonte. Os GIFs que já existiam não foram alterados.
