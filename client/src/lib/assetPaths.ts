@@ -16,5 +16,7 @@ export function exerciseImageUrl(key: string, manuscriptUrl: string): string {
   // for exercises that still need a manually supplied demonstration.
   return isGitHubPagesBuild && LOCAL_EXERCISE_ASSETS.has(key)
     ? appAssetUrl(`media/exercises/${key}.gif`)
-    : manuscriptUrl;
+    : manuscriptUrl.startsWith("/exercises/")
+      ? appAssetUrl(manuscriptUrl)
+      : manuscriptUrl;
 }
