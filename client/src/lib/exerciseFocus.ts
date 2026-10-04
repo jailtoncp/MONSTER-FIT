@@ -114,6 +114,7 @@ export const EXERCISE_FOCUS = {
     primaryMuscles: ["Peitoral maior"],
     secondaryMuscles: ["Deltoide anterior", "Tríceps braquial", "Serrátil anterior (estabilização escapular)"],
   },
+  "crucifixo-inverso-inclinado-halteres": { purpose: "Abertura posterior com o tronco fortemente inclinado, usando halteres para reproduzir a linha de movimento do voador inverso e aumentar a participação da parte superior das costas.", primaryMuscles: ["Deltoide posterior", "Romboides"], secondaryMuscles: ["Trapézio médio e inferior", "Infraespinal", "Eretores da coluna (estabilização)"] },
   crucifixo: {
     purpose: "Adução horizontal dos ombros com cotovelos levemente flexionados; enfatiza o peitoral maior, sem transformar o gesto em um press.",
     primaryMuscles: ["Peitoral maior"],
