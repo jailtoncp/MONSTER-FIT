@@ -181,6 +181,12 @@ const manuscriptImages: Record<string, string> = {
   "landmine-unilateral-ombro": "/exercises/landmine-unilateral-ombro.gif",
   "supino-landmine-ajoelhado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/delts/landmine-lateral-raise.gif",
   "battle-rope-alternating": "data:image/gif;base64,REPLACE_ME",
+  "box-jump-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/box-jump.gif",
+  "box-jump-over-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/box-jump-over.gif",
+  "lateral-box-jump-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/lateral-box-jump.gif",
+  "single-leg-box-jump": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/single-leg-box-jump.gif",
+  "seated-box-jump": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/seated-box-jump.gif",
+  "burpee-box-jump": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/burpee-box-jump.gif",
 };
 
 export const EXERCISE_IMAGES: Record<string, string> = Object.fromEntries(
