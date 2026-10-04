@@ -40,3 +40,7 @@ O GIF `bird-dog.gif` alterna três posições bilaterais fotografadas por PTPion
 ## Demonstração real de barra fixa neutra
 
 - **Barra fixa com pegada neutra:** GIF encontrado na página [How to Do Pull-Ups With a Neutral Grip — StrengthLog](https://www.strengthlog.com/neutral-grip-pull-ups/). A página de origem não informa uma licença aberta; o arquivo é mantido apenas para uso privado neste PWA, com atribuição no cartão do exercício, e não deve ser redistribuído ou usado comercialmente sem autorização do titular.
+
+## GIFs anatômicos — costas e ombros
+
+Os GIFs adicionados nesta etapa vêm do dataset [hasaneyldrm/exercises-dataset](https://github.com/hasaneyldrm/exercises-dataset), que identifica a mídia como **© Gym visual** e exige manter a atribuição [Gym visual](https://gymvisual.com/). O código e os metadados do dataset são MIT; a mídia segue os termos próprios da Gym visual. Os exercícios que já possuíam GIF local não foram alterados.
