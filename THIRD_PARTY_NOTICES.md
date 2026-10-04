@@ -36,3 +36,7 @@ Os GIFs sintéticos das oito modalidades foram criados para o Bella Fit a partir
 - **Agachamento unilateral:** [One-leg-squat-1.gif](https://commons.wikimedia.org/wiki/File:One-leg-squat-1.gif), autor Everkinetic, CC BY-SA 3.0.
 
 O GIF `bird-dog.gif` alterna três posições bilaterais fotografadas por PTPioneer. As fotos originais foram publicadas no Wikimedia Commons sob [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/): [Bird dog exercise](https://commons.wikimedia.org/wiki/File:Bird_dog_exercise.jpg), [Bird dog yoga pose](https://commons.wikimedia.org/wiki/File:Girl_doing_bird_dog_yoga_pose.jpg) e [Bird dog yoga pose 2](https://commons.wikimedia.org/wiki/File:Girl_doing_bird_dog_yoga_pose_2.jpg). O Bella Fit redimensiona e combina as fotos num GIF leve; a animação alterna poses estáticas e não é um vídeo nem uma captura contínua de movimento.
+
+## Demonstração real de barra fixa neutra
+
+- **Barra fixa com pegada neutra:** GIF encontrado na página [How to Do Pull-Ups With a Neutral Grip — StrengthLog](https://www.strengthlog.com/neutral-grip-pull-ups/). A página de origem não informa uma licença aberta; o arquivo é mantido apenas para uso privado neste PWA, com atribuição no cartão do exercício, e não deve ser redistribuído ou usado comercialmente sem autorização do titular.
