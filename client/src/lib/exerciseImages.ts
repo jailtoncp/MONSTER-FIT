@@ -6,6 +6,7 @@ const manuscriptImages: Record<string, string> = {
   "rosca-alternada-em-pe": "/exercises/rosca-alternada-em-pe.gif",
   "rosca-inversa": "/exercises/rosca-inversa.gif",
   "crucifixo-inverso": "/exercises/crucifixo-inverso.gif",
+  "crucifixo-inverso-inclinado-halteres": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-rear-fly.gif",
   "remada-curvada-supinada": "/exercises/remada-curvada-supinada.gif",
   "remada-cavalinho": "/exercises/remada-cavalinho.gif",
   "hip-thrust": "/manus-storage/hip-thrust_80b089d1.gif",
