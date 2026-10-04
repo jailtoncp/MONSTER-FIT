@@ -187,6 +187,18 @@ const manuscriptImages: Record<string, string> = {
   "single-leg-box-jump": "/exercises/box-jump-crossfit.gif",
   "seated-box-jump": "/exercises/box-jump-crossfit.gif",
   "burpee-box-jump": "/exercises/box-jump-crossfit.gif",
+  "dumbbell-snatch-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/dumbbell-one-arm-snatch.gif",
+  "dumbbell-clean-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/dumbbell-clean.gif",
+  "barbell-clean-and-press-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-clean-and-press.gif",
+  "kettlebell-double-snatch-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/kettlebell-double-snatch.gif",
+  "jump-squat-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/jump-squat.gif",
+  "jumping-lunge-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/lunge-with-jump.gif",
+  "dumbbell-burpee-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/cardio/dumbbell-burpee.gif",
+  "battle-rope-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/battling-ropes.gif",
+  "rope-climb-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/rope-climb.gif",
+  "medicine-ball-slam-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/medicine-ball-overhead-slam.gif",
+  "shoulder-tap-push-up-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/shoulder-tap-push-up.gif",
+  "handstand-push-up-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/handstand-push-up.gif",
 };
 
 export const EXERCISE_IMAGES: Record<string, string> = Object.fromEntries(
