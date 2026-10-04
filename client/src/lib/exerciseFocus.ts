@@ -204,6 +204,11 @@ export const EXERCISE_FOCUS = {
     primaryMuscles: ["Quadríceps", "Glúteos", "Flexores do quadril"],
     secondaryMuscles: ["Isquiotibiais", "Panturrilhas", "Abdômen (estabilização do tronco)"],
   },
+  "landmine-alternado": {
+    purpose: "Desenvolvimento alternado no landmine, trocando o braço a cada repetição; enfatiza os deltoides e exige estabilização do tronco.",
+    primaryMuscles: ["Deltoide anterior", "Deltoide lateral"],
+    secondaryMuscles: ["Tríceps braquial", "Peitoral maior (porção clavicular)", "Serrátil anterior", "Core", "Manguito rotador (estabilização)"],
+  },
   "landmine-unilateral-ombro": {
     purpose: "Desenvolvimento unilateral com trajetória diagonal do landmine; enfatiza o deltoide anterior e exige estabilização do tronco contra inclinação e rotação.",
     primaryMuscles: ["Deltoide anterior", "Deltoide lateral"],
