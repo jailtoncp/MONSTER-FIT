@@ -206,6 +206,17 @@ const manuscriptImages: Record<string, string> = {
   "medicine-ball-slam-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/medicine-ball-overhead-slam.gif",
   "shoulder-tap-push-up-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/shoulder-tap-push-up.gif",
   "handstand-push-up-crossfit": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/handstand-push-up.gif",
+  "encolhimento-barra": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/barbell-shrug.gif",
+  "encolhimento-halteres": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/dumbbell-shrug.gif",
+  "encolhimento-polia": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/cable-shrug.gif",
+  "encolhimento-smith": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/smith-shrug.gif",
+  "encolhimento-smith-por-tras": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/smith-back-shrug.gif",
+  "encolhimento-maquina": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/lever-shrug.gif",
+  "encolhimento-halteres-inclinado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/dumbbell-incline-shrug.gif",
+  "encolhimento-halteres-declinado": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/dumbbell-decline-shrug.gif",
+  "high-pull-sumo-kettlebell": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/kettlebell-sumo-high-pull.gif",
+  "puxada-escapular-barra": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/scapular-pull-up.gif",
+  "mergulho-escapular": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@v1.1.0/traps/scapula-dips.gif",
 };
 
 export const EXERCISE_IMAGES: Record<string, string> = Object.fromEntries(
