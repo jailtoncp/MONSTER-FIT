@@ -485,6 +485,10 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
 .workout-exercise-preview { display: flex; flex-wrap: wrap; gap: 5px; min-height: 34px; }
 .workout-exercise-preview span { align-self: flex-start; padding: 4px 7px; border-radius: 5px; color: #746970; background: #f5f1f2; font-size: 8px; }
 .dark .workout-exercise-preview span { background: #373036; }
+.workout-start-button { background: var(--rose-deep); color: #fff; border-color: var(--rose-deep); box-shadow: 0 4px 12px rgba(157, 54, 96, .24); font-weight: 800; }
+.workout-start-button:hover:not(:disabled) { background: #8e2853; color: #fff; border-color: #8e2853; box-shadow: 0 5px 15px rgba(157, 54, 96, .32); transform: translateY(-1px); }
+.workout-start-button:disabled { opacity: .45; box-shadow: none; }
+.dark .workout-start-button { color: #fff; }
 .workout-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 11px 15px 13px 17px; border-top: 1px solid var(--line); }
 .workout-edit-link { display: inline-flex; align-items: center; gap: 6px; border: 0; background: transparent; color: var(--rose-deep); font-size: 8px; letter-spacing: .08em; font-weight: 700; cursor: pointer; }
 .add-workout-tile { width: 100%; min-height: 86px; display: flex; align-items: center; gap: 12px; margin-top: 14px; padding: 17px; border: 1px dashed #dfcdd5; border-radius: 15px; background: transparent; text-align: left; cursor: pointer; transition: .16s var(--ease-out); }
