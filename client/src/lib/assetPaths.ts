@@ -11,12 +11,20 @@ export const HERO_IMAGE_URL = isGitHubPagesBuild
   ? appAssetUrl("media/monster-fit-training-hero.webp")
   : "/media/monster-fit-training-hero.webp";
 
-export function exerciseImageUrl(key: string, manuscriptUrl: string): string {
-  // Prefer the bundled file when it exists; external URLs are only a fallback
-  // for exercises that still need a manually supplied demonstration.
-  return isGitHubPagesBuild && LOCAL_EXERCISE_ASSETS.has(key)
-    ? appAssetUrl(`media/exercises/${key}.gif`)
-    : manuscriptUrl.startsWith("/exercises/")
-      ? appAssetUrl(manuscriptUrl)
-      : manuscriptUrl;
+export function exerciseImageUrl(_key: string, manuscriptUrl: string): string {
+  if (!isGitHubPagesBuild) return manuscriptUrl;
+
+  if (manuscriptUrl.startsWith("/exercises/")) {
+    const filename = manuscriptUrl.replace(/^\/exercises\//, "");
+    return appAssetUrl(`media/exercises/${filename}`);
+  }
+
+  if (manuscriptUrl.startsWith("/manus-storage/")) {
+    const filename = manuscriptUrl
+      .replace(/^\/manus-storage\//, "")
+      .replace(/_[a-f0-9]+(?=\.gif$)/i, "");
+    return appAssetUrl(`media/exercises/${filename}`);
+  }
+
+  return manuscriptUrl;
 }
