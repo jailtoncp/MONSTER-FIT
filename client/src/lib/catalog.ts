@@ -41,6 +41,7 @@ const rows: Array<[string, string, string, string, number, string, number, strin
   ["triceps-pulley", "Tríceps pulley", "Tríceps", "Cabo", 3, "12", 60, "Extensão de cotovelos na polia.", "Fixe os cotovelos junto ao corpo e estenda sem projetar os ombros."],
   ["triceps-frances", "Tríceps francês", "Tríceps", "Halter", 3, "12", 60, "Extensão acima da cabeça para tríceps.", "Mantenha os cotovelos apontados para frente e mova os antebraços."],
   ["triceps-testa", "Tríceps testa", "Tríceps", "Barra", 3, "10", 60, "Extensão de cotovelos deitada.", "Desça a barra com controle, mantendo os braços estáveis."],
+  ["triceps-testa-halteres-martelo", "Tríceps testa com halteres — pegada martelo", "Tríceps", "Halteres", 3, "10-12", 60, "Extensão de cotovelos deitado usando dois halteres com pegada neutra (martelo), mantendo os braços estáveis.", "Deite-se no banco e mantenha os halteres com as palmas voltadas uma para a outra; flexione os cotovelos levando os pesos ao lado da cabeça e estenda os braços sem abrir excessivamente os cotovelos."],
   ["abdominal", "Abdominal", "Abdômen", "Peso corporal", 3, "15", 45, "Flexão controlada do tronco.", "Expire ao subir e mantenha a lombar confortável."],
   ["prancha", "Prancha", "Abdômen", "Peso corporal", 3, "45", 45, "Isometria de estabilização do tronco.", "Alinhe cabeça, tronco e quadril e respire sem prender o ar."],
   ["elevacao-pernas", "Elevação de pernas", "Abdômen", "Peso corporal", 3, "12", 45, "Elevação controlada das pernas.", "Mantenha o abdômen ativo e evite arquear a lombar."],
