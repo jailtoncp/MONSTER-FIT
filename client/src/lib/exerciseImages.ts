@@ -38,6 +38,7 @@ const manuscriptImages: Record<string, string> = {
   "rosca-martelo": "/manus-storage/rosca-martelo_72efb3c1.gif",
   "triceps-pulley": "/manus-storage/triceps-pulley_70dedd2a.gif",
   "triceps-pulley-invertido": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/cable-reverse-grip-pushdown.gif",
+  "triceps-invertido-na-polia": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/cable-reverse-grip-pushdown.gif",
   "triceps-frances": "/manus-storage/triceps-frances_2fc9f5f7.gif",
   "triceps-testa": "/manus-storage/triceps-testa_2e3d3ded.gif",
   "triceps-frances-alternado-halteres": "https://d3d2ynhodh9o1z.cloudfront.net/exercises/dumbbell-lying-alternate-extension.gif",
