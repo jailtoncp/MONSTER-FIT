@@ -163,6 +163,11 @@ export const EXERCISE_FOCUS = {
     primaryMuscles: ["Tríceps braquial (cabeças lateral, medial e longa)"],
     secondaryMuscles: ["Ancôneo", "Flexores e estabilizadores do antebraço"],
   },
+  "triceps-invertido-na-polia": {
+    purpose: "Extensão dos cotovelos na polia alta com pegada invertida (supinada).",
+    primaryMuscles: ["Tríceps braquial"],
+    secondaryMuscles: ["Ancôneo", "Estabilizadores do antebraço"],
+  },
   "triceps-frances": {
     purpose: "Extensão do cotovelo acima da cabeça; a posição elevada do braço coloca a cabeça longa do tríceps em maior alongamento.",
     primaryMuscles: ["Tríceps braquial (ênfase funcional na cabeça longa)"],
