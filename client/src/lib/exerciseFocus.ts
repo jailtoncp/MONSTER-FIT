@@ -169,6 +169,7 @@ export const EXERCISE_FOCUS = {
     primaryMuscles: ["Tríceps braquial (cabeças longa, lateral e medial)"],
     secondaryMuscles: ["Ancôneo", "Manguito rotador e musculatura do ombro (estabilização)"],
   },
+  "triceps-frances-unilateral-halter": { purpose: "Extensão unilateral acima da cabeça com halter, com ênfase no tríceps e maior exigência de estabilidade do braço e do tronco.", primaryMuscles: ["Tríceps braquial"], secondaryMuscles: ["Deltoide e estabilizadores do ombro", "Abdômen (estabilização do tronco)"] },
   "triceps-testa": {
     purpose: "Extensão dos cotovelos deitado com os braços elevados; fortalece o tríceps enquanto o ombro mantém a posição do úmero.",
     primaryMuscles: ["Tríceps braquial (cabeças longa, lateral e medial)"],
