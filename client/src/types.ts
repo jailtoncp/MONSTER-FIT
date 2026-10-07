@@ -137,6 +137,8 @@ export interface ActiveWorkout {
   exerciseIndex: number;
   setIndex: number;
   performed: PerformedSet[];
+  restTimerEndsAt?: string | null;
+  restPausedSeconds?: number | null;
 }
 
 export interface BellaData {

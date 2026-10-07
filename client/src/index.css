@@ -1676,3 +1676,123 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
 /* High-contrast create-exercise action */
 .page-heading-actions .btn.btn-secondary { background: #b8f32b !important; color: #10150d !important; border: 1px solid #b8f32b !important; opacity: 1 !important; filter: none !important; box-shadow: 0 5px 16px rgba(184,243,43,.42) !important; font-weight: 900 !important; }
 .page-heading-actions .btn.btn-secondary:hover:not(:disabled) { background: #caff55 !important; color: #10150d !important; border-color: #caff55 !important; box-shadow: 0 7px 20px rgba(184,243,43,.52) !important; transform: translateY(-1px); }
+
+
+/* Workout timer controls and resumable session */
+.rest-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  gap: 8px;
+  margin-top: 16px;
+}
+.rest-controls > .btn {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 0 8px;
+  gap: 5px;
+  border: 1px solid color-mix(in srgb, var(--rose) 58%, var(--line));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--rose) 10%, var(--white));
+  color: color-mix(in srgb, var(--rose-deep) 68%, var(--ink));
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .015em;
+  opacity: 1;
+}
+.dark .rest-controls > .btn {
+  border-color: color-mix(in srgb, var(--rose) 64%, var(--line));
+  background: color-mix(in srgb, var(--rose) 11%, var(--white));
+  color: var(--rose);
+}
+.rest-controls > .btn-secondary {
+  border-color: color-mix(in srgb, var(--rose) 72%, var(--line));
+  background: color-mix(in srgb, var(--rose) 20%, var(--white));
+}
+.dark .rest-controls > .btn-secondary {
+  border-color: color-mix(in srgb, var(--rose) 82%, var(--line));
+  background: color-mix(in srgb, var(--rose) 22%, var(--white));
+  color: var(--rose);
+}
+.rest-controls > .btn:hover:not(:disabled) {
+  border-color: var(--rose);
+  background: color-mix(in srgb, var(--rose) 24%, var(--white));
+  color: color-mix(in srgb, var(--rose-deep) 72%, var(--ink));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--rose) 16%, transparent);
+  transform: translateY(-1px);
+}
+.dark .rest-controls > .btn:hover:not(:disabled) {
+  color: var(--rose);
+}
+.rest-controls > .btn:focus-visible,
+.runner-navigation button:focus-visible,
+.active-workout-resume .btn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--rose) 52%, transparent);
+  outline-offset: 2px;
+}
+.runner-navigation button {
+  min-height: 44px;
+  padding: 0 10px;
+  border-radius: 9px;
+  color: color-mix(in srgb, var(--rose-deep) 70%, var(--ink));
+  font-size: 10px;
+}
+.dark .runner-navigation button:not(:disabled) {
+  color: var(--rose);
+}
+.runner-navigation button:disabled {
+  opacity: .42;
+}
+.active-workout-resume {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 18px;
+  padding: 13px 15px;
+  border: 1px solid color-mix(in srgb, var(--rose) 48%, var(--line));
+  border-left: 4px solid var(--rose);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--rose) 7%, var(--white));
+  box-shadow: var(--shadow-card);
+}
+.active-workout-resume-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.active-workout-resume-copy .eyebrow {
+  color: var(--rose-deep);
+}
+.active-workout-resume-copy strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+.active-workout-resume-copy small {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.active-workout-resume .resume-workout-cta {
+  flex: 0 0 auto;
+  min-height: 46px;
+  border: 1px solid var(--rose);
+  background: var(--rose);
+  color: #151a10;
+  font-weight: 900;
+}
+.active-workout-resume .resume-workout-cta:hover {
+  border-color: var(--rose);
+  background: color-mix(in srgb, var(--rose) 86%, white);
+  color: #151a10;
+}
+
+@media (max-width: 640px) {
+  .rest-controls { gap: 6px; margin-top: 14px; }
+  .rest-controls > .btn { min-height: 46px; padding: 0 4px; gap: 4px; font-size: 9px; }
+  .runner-navigation button { min-height: 44px; padding: 0 4px; font-size: 9px; }
+  .active-workout-resume { align-items: stretch; flex-direction: column; gap: 10px; padding: 13px; }
+  .active-workout-resume .resume-workout-cta { width: 100%; }
+}
