@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
-import { AlertTriangle, Search } from "lucide-react";
+import { AlertTriangle, Play, Search } from "lucide-react";
 import AuthScreen from "./components/AuthScreen";
 import OwnerFooter from "./components/OwnerFooter";
 import AppShell from "./components/AppShell";
@@ -199,6 +199,10 @@ export default function App() {
   if (!account || !data) return <><AuthScreen auth={auth} /><div id="pwa-auth-install-anchor"/><OwnerFooter /></>;
   const searchIsOpen = searchValue.trim().length > 0;
   const activeWorkout = data.workouts.find((workout) => workout.id === data.activeWorkout?.workoutId) ?? null;
+  const activeExercise = activeWorkout?.exercises[data.activeWorkout?.exerciseIndex ?? -1];
+  const resumeDetails = activeExercise && data.activeWorkout
+    ? `${activeExercise.name} · série ${data.activeWorkout.setIndex + 1} de ${activeExercise.sets.length} · tempo preservado`
+    : "Continue exatamente de onde parou · tempo preservado";
   let pageContent;
   if (page === "runner" && activeWorkout) pageContent = <WorkoutRunner workout={activeWorkout} data={data} onUpdate={(active) => updateData((current) => ({ ...current, activeWorkout: active }))} onFinish={finishWorkout} onExit={() => { setPage("workouts"); }} />;
   else if (page === "home") pageContent = <Dashboard data={data} onNavigate={setPage} onStart={startWorkout} onCreate={createWorkout} />;
@@ -218,11 +222,15 @@ export default function App() {
   return <>
     <AppShell active={page} onNavigate={setPage} name={data.profile.name || account.name} email={account.email} onLogout={auth.logout} onNewWorkout={createWorkout} searchValue={searchValue} onSearch={setSearchValue} searchOpen={searchIsOpen} searchResults={searchResults} onSelectSearch={pickSearchResult}>
       {storageError && <div className="storage-warning" role="alert"><AlertTriangle size={17}/>{storageError}</div>}
+      {page !== "runner" && data.activeWorkout && activeWorkout && <section className="active-workout-resume" aria-label="Treino em andamento">
+        <div className="active-workout-resume-copy"><span className="eyebrow">SESSÃO SALVA · {activeWorkout.title}</span><strong>Retome seu treino</strong><small>{resumeDetails}</small></div>
+        <Button variant="secondary" className="resume-workout-cta" onClick={() => setPage("runner")}><Play size={16} /> RETOMAR TREINO</Button>
+      </section>}
       {pageContent}
     </AppShell>
     <OwnerFooter />
     <Modal open={!!deleteTarget} title={`Excluir ${deleteTarget?.title || "este treino"}?`} eyebrow="ESSA AÇÃO NÃO PODE SER DESFEITA" onClose={() => setDeleteTarget(null)}><p className="confirm-copy">O treino será removido e qualquer dia da agenda associado a ele ficará livre. O histórico de sessões já concluídas será mantido.</p><div className="modal-actions"><Button variant="outline" onClick={() => setDeleteTarget(null)}>CANCELAR</Button><Button variant="danger" onClick={confirmDeleteWorkout}>SIM, EXCLUIR</Button></div></Modal>
-    <Modal open={!!abandonPrompt} title="Trocar de treino?" eyebrow="TREINO EM ANDAMENTO" onClose={() => setAbandonPrompt(null)}><p className="confirm-copy">Há uma sessão ainda não concluída. Iniciar <strong>{abandonPrompt?.title}</strong> descartará as séries concluídas na sessão atual.</p><div className="modal-actions"><Button variant="outline" onClick={() => setAbandonPrompt(null)}>CONTINUAR ATUAL</Button><Button variant="danger" onClick={() => abandonPrompt && forceStartWorkout(abandonPrompt)}>DESCARTAR E INICIAR</Button></div></Modal>
+    <Modal open={!!abandonPrompt} title="Trocar de treino?" eyebrow="TREINO EM ANDAMENTO" onClose={() => setAbandonPrompt(null)}><p className="confirm-copy">Há uma sessão ainda não concluída. Se preferir, retome a série e o descanso salvos. Iniciar <strong>{abandonPrompt?.title}</strong> descartará as séries concluídas na sessão atual.</p><div className="modal-actions"><Button variant="outline" onClick={() => { setAbandonPrompt(null); setPage("runner"); }}>RETOMAR TREINO ATUAL</Button><Button variant="danger" onClick={() => abandonPrompt && forceStartWorkout(abandonPrompt)}>DESCARTAR E INICIAR</Button></div></Modal>
     {!isInstalled && <InstallHint />}
   </>;
 }
