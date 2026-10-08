@@ -1,4 +1,4 @@
-const CACHE_NAME = "monster-fit-shell-v3";
+const CACHE_NAME = "monster-fit-shell-v4";
 const BASE_PATH = new URL("./", self.location.href).pathname;
 const IS_GITHUB_PAGES = BASE_PATH === "/MONSTER-FIT/";
 const appUrl = (path) => `${BASE_PATH}${path}`;
