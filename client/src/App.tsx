@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
-import { AlertTriangle, Play, Search } from "lucide-react";
+import { AlertTriangle, Search } from "lucide-react";
 import AuthScreen from "./components/AuthScreen";
 import OwnerFooter from "./components/OwnerFooter";
 import AppShell from "./components/AppShell";
@@ -250,10 +250,6 @@ export default function App() {
   if (!account || !data) return <><AuthScreen auth={auth} /><div id="pwa-auth-install-anchor"/><OwnerFooter /></>;
   const searchIsOpen = searchValue.trim().length > 0;
   const activeWorkout = data.workouts.find((workout) => workout.id === data.activeWorkout?.workoutId) ?? null;
-  const activeExercise = activeWorkout?.exercises[data.activeWorkout?.exerciseIndex ?? -1];
-  const resumeDetails = activeExercise && data.activeWorkout
-    ? `${activeExercise.name} · série ${data.activeWorkout.setIndex + 1} de ${activeExercise.sets.length} · tempo preservado`
-    : "Continue exatamente de onde parou · tempo preservado";
   let pageContent;
   if (page === "runner" && activeWorkout) pageContent = <WorkoutRunner workout={activeWorkout} data={data} onUpdate={(active) => updateData((current) => ({ ...current, activeWorkout: active }))} onResume={() => updateData((current) => current.activeWorkout ? { ...current, activeWorkout: resumeActiveWorkout(current.activeWorkout) } : current)} onFinish={finishWorkout} onExit={() => { setPage("workouts"); }} />;
   else if (page === "home") pageContent = <Dashboard data={data} onNavigate={setPage} onStart={startWorkout} onCreate={createWorkout} />;
@@ -273,10 +269,6 @@ export default function App() {
   return <>
     <AppShell active={page} onNavigate={setPage} name={data.profile.name || account.name} email={account.email} onLogout={auth.logout} onNewWorkout={createWorkout} searchValue={searchValue} onSearch={setSearchValue} searchOpen={searchIsOpen} searchResults={searchResults} onSelectSearch={pickSearchResult}>
       {storageError && <div className="storage-warning" role="alert"><AlertTriangle size={17}/>{storageError}</div>}
-      {page !== "runner" && data.activeWorkout && activeWorkout && <section className="active-workout-resume" aria-label="Treino em andamento">
-        <div className="active-workout-resume-copy"><span className="eyebrow">SESSÃO SALVA · {activeWorkout.title}</span><strong>Retome seu treino</strong><small>{resumeDetails}</small></div>
-        <Button variant="secondary" className="resume-workout-cta" onClick={() => setPage("runner")}><Play size={16} /> RETOMAR TREINO</Button>
-      </section>}
       {pageContent}
     </AppShell>
     <OwnerFooter />
