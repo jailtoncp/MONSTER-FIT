@@ -134,11 +134,20 @@ export interface CustomTafExercise {
 export interface ActiveWorkout {
   workoutId: string;
   startedAt: string;
+  /** Timestamp da retomada atual; ausente durante uma pausa. */
+  resumedAt?: string;
+  /** Segundos acumulados em segmentos ativos, sem contar períodos fora do app. */
+  elapsedSeconds?: number;
+  lastCheckpointAt?: string;
+  isPaused?: boolean;
   exerciseIndex: number;
   setIndex: number;
   performed: PerformedSet[];
   restTimerEndsAt?: string | null;
   restPausedSeconds?: number | null;
+  restRemainingSeconds?: number | null;
+  restEndsAt?: string | null;
+  restPaused?: boolean;
 }
 
 export interface BellaData {

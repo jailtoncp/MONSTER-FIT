@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import { AlertTriangle, Play, Search } from "lucide-react";
 import AuthScreen from "./components/AuthScreen";
@@ -19,7 +19,8 @@ import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
 import CoachPage from "./pages/CoachPage";
 import { useBellaFit } from "./hooks/useBellaFit";
-import { createInitialData, validateBackup } from "./lib/storageService";
+import { createInitialData, saveData, validateBackup } from "./lib/storageService";
+import { checkpointActiveWorkout, createActiveWorkout, pauseActiveWorkout, recoverActiveWorkout, resumeActiveWorkout } from "./lib/workoutSession";
 import { appendExerciseToWorkout, assignScheduledWorkout, duplicateWorkout as createWorkoutCopy, updateWorkoutSchedule } from "./lib/programService";
 import { getDailyWorkoutReminder, reminderStorageKey } from "./lib/notificationService";
 import { appAssetUrl } from "./lib/assetPaths";
@@ -35,6 +36,55 @@ export default function App() {
   const [deleteTarget, setDeleteTarget] = useState<Workout | null>(null);
   const [abandonPrompt, setAbandonPrompt] = useState<Workout | null>(null);
   const [isInstalled, setIsInstalled] = useState(false);
+  const currentPageRef = useRef<PageId>(page);
+  const initializedAccountRef = useRef<string | null>(null);
+
+  function checkpointRunningWorkout() {
+    if (!account || !data?.activeWorkout || data.activeWorkout.isPaused) return;
+    const paused = pauseActiveWorkout(data.activeWorkout);
+    const snapshot = { ...data, activeWorkout: paused };
+    updateData((current) => current.activeWorkout?.workoutId === paused.workoutId ? { ...current, activeWorkout: paused } : current);
+    try { saveData(account, snapshot); } catch { /* O aviso de armazenamento já cobre a falha de persistência. */ }
+  }
+
+  useEffect(() => {
+    if (!account || !data) { initializedAccountRef.current = null; return; }
+    if (initializedAccountRef.current === account.id) return;
+    initializedAccountRef.current = account.id;
+    if (data.activeWorkout && !data.activeWorkout.isPaused) {
+      const paused = recoverActiveWorkout(data.activeWorkout);
+      const snapshot = { ...data, activeWorkout: paused };
+      updateData((current) => ({ ...current, activeWorkout: paused }));
+      try { saveData(account, snapshot); } catch { /* O estado continua em memória; a persistência será tentada novamente. */ }
+    }
+  }, [account, data, updateData]);
+
+  useEffect(() => {
+    const pauseIfHidden = () => { if (document.visibilityState === "hidden") checkpointRunningWorkout(); };
+    window.addEventListener("pagehide", checkpointRunningWorkout);
+    document.addEventListener("visibilitychange", pauseIfHidden);
+    return () => {
+      window.removeEventListener("pagehide", checkpointRunningWorkout);
+      document.removeEventListener("visibilitychange", pauseIfHidden);
+    };
+  }, [account, data, updateData]);
+
+  useEffect(() => {
+    if (currentPageRef.current === "runner" && page !== "runner") checkpointRunningWorkout();
+    currentPageRef.current = page;
+  }, [page, account, data, updateData]);
+
+  useEffect(() => {
+    if (!account || !data?.activeWorkout || data.activeWorkout.isPaused) return;
+    const active = data.activeWorkout;
+    const timer = window.setInterval(() => {
+      const checkpoint = checkpointActiveWorkout(active);
+      const snapshot = { ...data, activeWorkout: checkpoint };
+      updateData((current) => current.activeWorkout?.workoutId === active.workoutId && !current.activeWorkout.isPaused ? { ...current, activeWorkout: checkpoint } : current);
+      try { saveData(account, snapshot); } catch { /* A persistência é repetida no próximo heartbeat e ao sair. */ }
+    }, 15_000);
+    return () => window.clearInterval(timer);
+  }, [account, data, updateData]);
 
   useEffect(() => {
     const requestNavigation = (event: Event) => { const value = (event as CustomEvent<PageId>).detail; if (value) setPage(value); };
@@ -124,20 +174,21 @@ export default function App() {
   function startWorkout(workout: Workout) {
     if (!workout.exercises.length) { toast.error("Adicione pelo menos um exercício antes de iniciar."); return; }
     if (data?.activeWorkout && data.activeWorkout.workoutId !== workout.id) { setAbandonPrompt(workout); return; }
-    const active: ActiveWorkout = data?.activeWorkout?.workoutId === workout.id ? data.activeWorkout : { workoutId: workout.id, startedAt: new Date().toISOString(), exerciseIndex: 0, setIndex: 0, performed: [] };
+    const existing = data?.activeWorkout?.workoutId === workout.id ? data.activeWorkout : null;
+    const active: ActiveWorkout = existing ? resumeActiveWorkout(existing) : createActiveWorkout(workout.id);
     updateData((current) => ({ ...current, activeWorkout: active })); setPage("runner");
   }
   function forceStartWorkout(workout: Workout) {
-    const active: ActiveWorkout = { workoutId: workout.id, startedAt: new Date().toISOString(), exerciseIndex: 0, setIndex: 0, performed: [] };
+    const active: ActiveWorkout = createActiveWorkout(workout.id);
     updateData((current) => ({ ...current, activeWorkout: active })); setAbandonPrompt(null); setPage("runner");
   }
-  function finishWorkout(performed: PerformedSet[], startedAt: string) {
+  function finishWorkout(performed: PerformedSet[], startedAt: string, durationSeconds: number) {
     const workout = data?.workouts.find((item) => item.id === data.activeWorkout?.workoutId);
     if (!workout || !account) { updateData((current) => ({ ...current, activeWorkout: null })); setPage("home"); return; }
     const finishedAt = new Date().toISOString();
     const unitFactor = data?.settings.weightUnit === "lb" ? 0.45359237 : 1;
     const volumeKg = performed.reduce((sum, set) => sum + (Number(set.weight) || 0) * (Number(set.reps) || 0), 0) * unitFactor;
-    const record = { id: makeId("session"), workoutId: workout.id, title: workout.title, startedAt, finishedAt, durationSeconds: Math.max(60, Math.floor((Date.now() - new Date(startedAt).getTime()) / 1000)), performed, volumeKg, weightUnit: data?.settings.weightUnit ?? "kg" };
+    const record = { id: makeId("session"), workoutId: workout.id, title: workout.title, startedAt, finishedAt, durationSeconds: Math.max(0, durationSeconds), performed, volumeKg, weightUnit: data?.settings.weightUnit ?? "kg" };
     updateData((current) => ({ ...current, activeWorkout: null, history: [record, ...current.history] }));
     setPage("history");
     toast.success("Treino concluído! Seus dados foram salvos no histórico.", { duration: 4500 });
@@ -204,7 +255,7 @@ export default function App() {
     ? `${activeExercise.name} · série ${data.activeWorkout.setIndex + 1} de ${activeExercise.sets.length} · tempo preservado`
     : "Continue exatamente de onde parou · tempo preservado";
   let pageContent;
-  if (page === "runner" && activeWorkout) pageContent = <WorkoutRunner workout={activeWorkout} data={data} onUpdate={(active) => updateData((current) => ({ ...current, activeWorkout: active }))} onFinish={finishWorkout} onExit={() => { setPage("workouts"); }} />;
+  if (page === "runner" && activeWorkout) pageContent = <WorkoutRunner workout={activeWorkout} data={data} onUpdate={(active) => updateData((current) => ({ ...current, activeWorkout: active }))} onResume={() => updateData((current) => current.activeWorkout ? { ...current, activeWorkout: resumeActiveWorkout(current.activeWorkout) } : current)} onFinish={finishWorkout} onExit={() => { setPage("workouts"); }} />;
   else if (page === "home") pageContent = <Dashboard data={data} onNavigate={setPage} onStart={startWorkout} onCreate={createWorkout} />;
   else if (page === "workouts") pageContent = <WorkoutsPage data={data} onCreate={createWorkout} onEdit={(workout) => { setEditingId(workout.id); setPage("editor"); }} onDuplicate={duplicateWorkout} onDelete={setDeleteTarget} onStart={startWorkout} />;
   else if (page === "editor" && currentWorkout) pageContent = <WorkoutEditor key={currentWorkout.id} workout={currentWorkout} data={data} onChange={updateWorkout} onBack={() => setPage("workouts")} onFavorite={favorite} />;

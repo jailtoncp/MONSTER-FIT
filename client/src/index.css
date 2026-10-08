@@ -1795,4 +1795,43 @@ kbd { padding: 2px 5px; border: 1px solid var(--line); border-radius: 5px; color
   .runner-navigation button { min-height: 44px; padding: 0 4px; font-size: 9px; }
   .active-workout-resume { align-items: stretch; flex-direction: column; gap: 10px; padding: 13px; }
   .active-workout-resume .resume-workout-cta { width: 100%; }
+
+}
+
+/* Workout rest controls: high contrast and comfortable touch targets. */
+.rest-controls { width: 100%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.rest-controls .rest-action { width: 100%; min-width: 0; min-height: 48px; padding: 0 8px; border-radius: 10px; font-size: 11px; font-weight: 800; letter-spacing: .015em; opacity: 1; }
+.rest-adjust-button { color: var(--rose-deep); background: color-mix(in srgb, var(--rose) 10%, var(--white)); border-color: color-mix(in srgb, var(--rose) 46%, var(--line-strong)); }
+.rest-pause-button, .rest-skip-button { color: #fff; background: var(--rose-deep); border-color: var(--rose-deep); }
+.rest-controls .rest-action:hover:not(:disabled) { filter: brightness(.94); transform: translateY(-1px); }
+.rest-controls .rest-action:disabled { opacity: .52; }
+.dark .rest-adjust-button { color: var(--rose); background: color-mix(in srgb, var(--rose) 9%, #111711); border-color: color-mix(in srgb, var(--rose) 60%, #39452f); }
+.dark .rest-pause-button, .dark .rest-skip-button { color: #11160d; background: var(--rose); border-color: var(--rose); }
+.dark .rest-controls .rest-action { color: #b9ff36; background: #151b15; border: 1px solid #66951d; box-shadow: inset 0 0 0 1px rgb(185 255 54 / 8%); }
+.dark .rest-controls .rest-action:hover:not(:disabled) { color: #d3ff86; background: #202a1d; border-color: #b9ff36; }
+.dark .rest-controls .rest-action:focus-visible { outline: 3px solid #b9ff36; outline-offset: 3px; }
+.runner-paused-banner { display: grid; grid-template-columns: 1fr auto; gap: 5px 14px; align-items: center; margin-bottom: 14px; padding: 14px 16px; border-color: color-mix(in srgb, var(--rose) 48%, var(--line)); background: color-mix(in srgb, var(--rose) 8%, var(--white)); }
+.runner-paused-banner > span { display: flex; align-items: center; gap: 7px; color: var(--rose-deep); font-size: 11px; font-weight: 800; letter-spacing: .07em; }
+.runner-paused-banner p { grid-column: 1; margin: 0; color: var(--ink-soft); font-size: 10px; line-height: 1.5; }
+.runner-paused-banner .btn { grid-column: 2; grid-row: 1 / span 2; }
+.dark .runner-paused-banner { background: color-mix(in srgb, var(--rose) 8%, #131813); }
+.dark .runner-paused-banner > span { color: var(--rose); }
+.dark .runner-paused-banner p { color: var(--ink-soft); }
+.resume-workout-card { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; padding: 17px; border-color: color-mix(in srgb, var(--rose) 42%, var(--line)); background: color-mix(in srgb, var(--rose) 7%, var(--white)); }
+.resume-workout-icon { width: 40px; height: 40px; display: grid; flex: 0 0 auto; place-items: center; border-radius: 12px; color: #11160d; background: var(--rose); }
+.resume-workout-copy { min-width: 0; flex: 1; }
+.resume-workout-copy h2 { margin: 3px 0; font-size: 17px; }
+.resume-workout-copy p { margin: 0 0 3px; color: var(--ink-soft); font-size: 10px; }
+.resume-workout-copy small { color: var(--muted); font-size: 9px; }
+.dark .resume-workout-card { background: color-mix(in srgb, var(--rose) 8%, #131913); }
+@media (max-width: 640px) {
+  .rest-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .rest-controls .rest-action { min-height: 48px; font-size: 12px; }
+  .runner-paused-banner { grid-template-columns: 1fr; }
+  .runner-paused-banner p, .runner-paused-banner .btn { grid-column: 1; grid-row: auto; }
+  .runner-paused-banner .btn { width: 100%; margin-top: 5px; }
+  .resume-workout-card { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
+  .resume-workout-icon { width: 34px; height: 34px; }
+  .resume-workout-copy { flex-basis: calc(100% - 50px); }
+  .resume-workout-card > .btn { width: 100%; }
 }

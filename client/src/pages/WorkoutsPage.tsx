@@ -13,7 +13,8 @@ export default function WorkoutsPage({ data, onCreate, onEdit, onDuplicate, onDe
         <div className="workout-card-stats"><span><Dumbbell size={14}/>{workout.exercises.length} exercícios</span><span>{workout.exercises.reduce((sum,e)=>sum+e.sets.length,0)} séries</span></div>
         <div className="workout-exercise-preview">{workout.exercises.slice(0,3).map((exercise) => <span key={exercise.id}>{exercise.name}</span>)}{workout.exercises.length > 3 && <span>+ {workout.exercises.length-3} exercícios</span>}{workout.exercises.length === 0 && <span>Adicione exercícios para completar sua rotina</span>}</div>
       </div>
-      <div className="workout-card-footer"><button type="button" className="workout-edit-link" onClick={() => onEdit(workout)}>EDITAR ROTINA <Pencil size={13}/></button><Button variant="secondary" size="sm" className="workout-start-button" onClick={() => onStart(workout)} disabled={!workout.exercises.length}><Play size={14} fill="currentColor"/> INICIAR</Button></div>
+      <div className="workout-card-footer"><button type="button" className="workout-edit-link" onClick={() => onEdit(workout)}>EDITAR ROTINA <Pencil size={13}/></button><Button variant="secondary" size="sm" className="workout-start-button" onClick={() => onStart(workout)} disabled={!workout.exercises.length}><Play size={14} fill="currentColor"/> {data.activeWorkout?.workoutId === workout.id ? "RETOMAR" : "INICIAR"}</Button></div>
+417dd34 (feat: add resilient workout session recovery)
     </Card>)}</div>}
     {data.workouts.length > 0 && <button type="button" className="add-workout-tile" onClick={onCreate}><span><Plus size={20}/></span><strong>Uma nova rotina?</strong><small>Crie um treino do seu jeito.</small></button>}
   </div>;

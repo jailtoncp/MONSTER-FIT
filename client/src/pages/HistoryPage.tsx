@@ -3,7 +3,7 @@ import { ArrowRight, CalendarDays, Check, Clock3, Dumbbell, History, ListChecks,
 import type { BellaData, WorkoutHistory } from "../types";
 import { Button, Card, EmptyState, Modal, PageHeading, Pill } from "../components/common";
 
-function duration(seconds:number){return `${Math.floor(seconds/60)} min`;}
+function duration(seconds:number){return seconds < 60 ? `${seconds} s` : `${Math.floor(seconds/60)} min`;}
 export default function HistoryPage({ data }: { data:BellaData }) {
   const [selected,setSelected]=useState<WorkoutHistory|null>(null);
   const sessions=[...data.history].sort((a,b)=>b.finishedAt.localeCompare(a.finishedAt));
